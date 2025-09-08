@@ -7,9 +7,9 @@ async function getRequest(path) {
         const response = await request(baseURL)
             .get(path)
             .set('Accept', 'application/json')
-            .expect('Content-Type', /json/)
+            .expect('Content-Type', 'application/json; charset=utf-8')
             .expect(200);
-        return response;
+        return response.body;
     } catch (error) {
         console.error(`Error making GET request:, ${path}`, error)
         throw error;

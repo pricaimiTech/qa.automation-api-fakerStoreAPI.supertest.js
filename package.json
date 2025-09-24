@@ -4,7 +4,9 @@
   "description": "Automation project for Fake Store API https://fakestoreapi.com/",
   "main": "index.js",
   "scripts": {
-    "test": "jest __Test/**/*.test.js"
+    "functional-test": "jest __Test__/functional/",
+    "contract-test": "jest __Test__/contract/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
